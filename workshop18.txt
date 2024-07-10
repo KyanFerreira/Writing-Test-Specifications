@@ -1,0 +1,92 @@
+Unit Test Section
+1.	A function called "multiplication" that returns the product of the two input numbers.
+
+This kind of test requirement would only need unit tests. An integration or functional test is not required because we do not know what it is to be used for.
+
+Unit Test
+•	Expect multiply(2 , 3) to be a number
+•	Expect multiply(2,3) to be 6
+•	Expect multiply(“a”, 3) to be an error
+•	Expect multiply(.5, 3) to have a decimal 
+•	Expect multiply(-1,2) to be a negative number
+•	Expect multiply(1,2,3) to be an error
+•	Expect multiply(1,false) to be an error
+•	Expect multiply(“2”,”3”) to be a number (Convert a string that is just numbers to number and multiply the two together) 
+
+2.	A function called "concatOdds" takes two arrays of integers as arguments. It should return a single array that only contains the odd numbers, in ascending order, from both of the arrays.
+Unit Test
+•	Expect concatOdds to take two parameters being two arrays of numbers
+•	Expect concatOdds([3,2,1] ,[9,1,1,1,4,15,-1]) to return a single list of numbers
+•	Expect concatOdds(([3,2,1] ,[9,1,1,1,4,15,-1) to result in [-1,1,3,9,15]
+•	Expect concatOdds() to take two list of numbers and return a list of just the odd numbers in ascending order
+•	Expect concatOdds(([3,2,1] ,[9,1,1,1,4,15,-1,”h”]) to return an error
+•	Expect concatOdds(([3,2,1,”h”] ,[9,1,1,1,4,15,-1]) to return an error
+•	Expect concatOdds(([3,2,1,”h”] ,[9,1,1,1,4,15,-1, false]) to return an error
+•	Expect concatOdds([3,2,1, true] ,[9,1,1,1,4,15,-1]) to return an Error
+•	Expect concatOdds to not return any multiples of the same number if there are 4 ones it should only appear in the list once
+•	Expect concatOdds(3, [9,1,1,1,4,15,-1]) to return an error because it is not a list comparing a list just a number comparing a list 
+•	Expect concatOdds() having any parameters that are not both lists to automatically throw an error whether it is a Boolean, string, or a single number
+•	Expect concatOdds() to throw an error if a list exists with non-number strings inside it.
+
+Functional Test Section
+
+1.	A shopping cart checkout feature that allows a user to check out as a guest (without an account), or as a logged-in user. They should be allowed to do either, but should be asked if they want to create an account or log in if they check out as a guest.
+•	Operate the shopping cart checkout feature as a user (Purchase as guest)
+o	Go to the site 
+o	Do not log in
+o	Search for items to purchase
+o	Items should have an add to shopping cart button that user can click and add to cart
+o	When done user should be able to click on the shopping cart button found in the upper navigation bar to get to shopping cart
+o	User should be able to see all chosen items in cart
+o	User should be able to press a button to proceed to checkout or cancel
+o	User clicks proceed to check out
+o	Ask customer with prompt of some kind to create an account or continue as a guest.
+o	Have user continue as guest and check out products
+o	User receives all emails about order and invoice of purchase
+•	Operate the shopping cart checkout feature as a user (Create Account But don’t buy)
+o	Go to the site 
+o	Do not log in
+o	Search for items to purchase
+o	Items should have an add to shopping cart button that user can click and add to cart
+o	When done user should be able to click on the shopping cart button found in the upper navigation bar to get to shopping cart
+o	User should be able to see all chosen items in cart
+o	User should be able to press a button to proceed to checkout or cancel
+o	User clicks proceed to check out
+o	Ask customer with prompt of some kind to create an account or continue as a guest.
+o	User creates an account
+o	User does not purchase anything and closes window (User may be busy)
+o	(Make sure the users information is correctly captured)
+•	Operate the shopping cart checkout feature as a user (Create Account and buy)
+o	Go to the site 
+o	Do not log in
+o	Search for items to purchase
+o	Items should have an add to shopping cart button that user can click and add to cart
+o	When done user should be able to click on the shopping cart button found in the upper navigation bar to get to shopping cart
+o	User should be able to see all chosen items in cart
+o	User should be able to press a button to proceed to checkout or cancel
+o	User clicks proceed to check out
+o	Ask customer with prompt of some kind to create an account or continue as a guest.
+o	User creates an account
+o	User continues with Checkout
+o	User receives all emails associated to Account Creation 
+o	User receives all emails about order and invoice of purchase
+•	Operate the shopping cart checkout feature as a user (User already has account)
+o	Go to the site 
+o	Customer does Log in
+o	Search for items to purchase
+o	Items should have an add to shopping cart button that user can click and add to cart
+o	When done user should be able to click on the shopping cart button found in the upper navigation bar to get to shopping cart
+o	User should be able to see all chosen items in cart
+o	User should be able to press a button to proceed to checkout or cancel
+o	User clicks proceed to check out
+o	User continues with Checkout
+o	User receives all emails about order and invoice of purchase
+•	Operate the shopping cart checkout feature as a user (User forgets to add to cart)
+o	Go to the site 
+o	Customer does Log in
+o	Search for items to purchase
+o	Items should have an add to shopping cart button that user can click and add to cart
+o	User does not add items and clicks button for shopping cart found in the upper navigation bar
+o	Customer does not notice shopping cart is empty and tries to proceed with check out
+o	A pop up explains to the customer they must add items to the cart. 
+o	The customer can decide to find items or leave the site. 
